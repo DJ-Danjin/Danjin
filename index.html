@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>방문할때마다 변하는 이미지</title>
+<script language = "javascript">
+	var imgArray = new Array();
+	imgArray[0] = "F:\02. DJ\DJTG\LDJ\Picrew\327_i3avi4Kt.png";
+	imgArray[1] = "F:\02. DJ\DJTG\LDJ\Picrew\648_18vXt0kQ.png";
+	imgArray[2] = "F:\02. DJ\DJTG\LDJ\Picrew\3595_tLRqGTfO.png";
+	imgArray[3] = "F:\02. DJ\DJTG\LDJ\Picrew\4890_cuPVgtjp.png";
+	
+	function showImage(){
+		var imgNum = Math.round(Math.random()*3);
+		var objImg = document.getElementById("introImg");
+		objImg.src = imgArray[imgNum];
+	}
+</script>
+</head>
+<body onload = "showImage()">
+	<img id = "introImg" border="0">
+</body>
+</html>

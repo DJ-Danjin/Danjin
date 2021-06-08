@@ -290,14 +290,14 @@
       /*메로나*/"https://cdn.discordapp.com/attachments/778559127273734165/811209935090221066/17342877_1683162561698884_356389164756563532_n.png"
     );
 	
-	function showImage(){
-		var imgNum = Math.round(Math.random()*(mimg.length - 1));
-		var objImg = document.getElementById("introImg");
-		objImg.src = mimg[imgNum];
+	function showImage() {
+		var Num = Math.round(Math.random()*(mimg.length - 1));
+        document.write('<h1>' + mimg[Num] + '</h1>');
+        document.write('<img src="' + mimg[Num] + '" border=0>');
 	}
+    showImage();
 </script>
 </head>
-<body onload = "showImage()">
-	<img id = "introImg" border="0">
+<body>
 </body>
 </html>

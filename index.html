@@ -291,17 +291,13 @@
     );
 	
 	function showImage(){
-		var imgNum = Math.round(Math.random()*mimg.length);
+		var imgNum = Math.round(Math.random()*(mimg.length - 1));
 		var objImg = document.getElementById("introImg");
 		objImg.src = mimg[imgNum];
+		document.write(mimg[imgNum]);
 	}
 </script>
 </head>
-	<body>
-		<SCRIPT language = "JavaScript">
-            		document.write(mimg[imgNum]);
-        	</SCRIPT>
-	</body>
 <body onload = "showImage()">
 	<img id = "introImg" border="0">
 </body>

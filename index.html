@@ -4,9 +4,20 @@
 <meta charset="EUC-KR">
 <title>로아와 파싱</title>
 <script language = "javascript">
-    var url = org.jsoup.Jsoup.connect("https://loawa.com/").get();
-
-    document.write(url);
+    var optionAxios = {
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,OPTIONS',
+          'Access-Control-Allow-Headers': 'Content-Type, Authorization, Content-Length, X-Requested-With'
+        }
+  }
+  this.$axios.get('https://loawa.com/' + url, optionAxios)
+    .then((response) => {
+      var htmlText = response.data;
+      console.log(htmlText);
+      document.write(htmlText);
+    })
 </script>
 </head>
 <body>

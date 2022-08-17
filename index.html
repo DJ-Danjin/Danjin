@@ -4,18 +4,9 @@
 <meta charset="EUC-KR">
 <title>로아와 파싱</title>
 <script language = "javascript">
-var request = require('request'),
-    cheerio = require('cheerio');
+    var url = org.jsoup.Jsoup.connect("https://loawa.com/").get();
 
-var url = "https://loawa.com/";
- 
-
-request(url, function (err, res, html) {
-    if (!err) {
-        var $ = cheerio.load(html);
-    }
-    document.write($);
-})
+    document.write(url);
 </script>
 </head>
 <body>

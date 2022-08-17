@@ -4,20 +4,14 @@
 <meta charset="EUC-KR">
 <title>로아와 파싱</title>
 <script language = "javascript">
-    var optionAxios = {
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,OPTIONS',
-          'Access-Control-Allow-Headers': 'Content-Type, Authorization, Content-Length, X-Requested-With'
-        }
-  }
-  this.$axios.get('https://loawa.com/' + url, optionAxios)
-    .then((response) => {
-      var htmlText = response.data;
-      console.log(htmlText);
-      document.write(htmlText);
-    })
+    const request = new XMLHttpRequest();
+    const url = 'https://loawa.com'; // 긁어오고 싶은 주소를 넣는다. 예제는 네이버
+
+    request.open('GET', url, true);
+    request.onload = function () {
+      console.log(request.responseText); // 긁어온 내용 뿌리기
+    };
+    request.send();
 </script>
 </head>
 <body>
